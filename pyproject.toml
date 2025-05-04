@@ -1,0 +1,26 @@
+[project]
+name = "ai-genai-image-generation"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+[tool.poetry.dependencies]
+torch = "*"
+torchvision="*"
+matplotlib="*"
+tqdm="*"
+
+[tool.poetry]
+packages = [{include = "ai_genai_image_generation", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+run-auto-encoder = "ai_genai_image_generation.main:run_auto_encoder"
